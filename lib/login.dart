@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'movie.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -113,7 +114,14 @@ class _LoginPageState extends State<LoginPage> {
                 width: double.infinity,
                 height: 55,
                 child: OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MoviePage(),
+                      ),
+                    );
+                  },
                   style: OutlinedButton.styleFrom(
                     side: const BorderSide(color: Colors.black, width: 1.5),
                     shape: RoundedRectangleBorder(
@@ -131,14 +139,12 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               const SizedBox(height: 20),
-            
+
               GestureDetector(
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                      builder: (context) => const SignUpPage(),
-                    ),
+                    MaterialPageRoute(builder: (context) => const SignUpPage()),
                   );
                 },
                 child: const Text(
@@ -233,7 +239,11 @@ class _SignUpPageState extends State<SignUpPage> {
                 children: [
                   GestureDetector(
                     onTap: () => Navigator.pop(context),
-                    child: const Icon(Icons.close, size: 28, color: Colors.black),
+                    child: const Icon(
+                      Icons.close,
+                      size: 28,
+                      color: Colors.black,
+                    ),
                   ),
                   const SizedBox(width: 10),
                   Expanded(
@@ -253,10 +263,7 @@ class _SignUpPageState extends State<SignUpPage> {
               const Text(
                 'Sign Up Account',
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 8),
               const Text(
@@ -308,7 +315,10 @@ class _SignUpPageState extends State<SignUpPage> {
                       children: [
                         const Text(
                           'First Name',
-                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
                         const SizedBox(height: 8),
                         TextField(
@@ -335,7 +345,10 @@ class _SignUpPageState extends State<SignUpPage> {
                       children: [
                         const Text(
                           'Last Name',
-                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
                         const SizedBox(height: 8),
                         TextField(
