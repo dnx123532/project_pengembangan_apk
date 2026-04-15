@@ -16,7 +16,6 @@ class DetailMoviePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // ================= HEADER =================
             Container(
               padding: const EdgeInsets.all(16),
               color: Colors.white,
@@ -71,7 +70,6 @@ class DetailMoviePage extends StatelessWidget {
 
             const SizedBox(height: 10),
 
-            // ================= JADWAL =================
             Container(
               padding: const EdgeInsets.all(16),
               color: Colors.white,
